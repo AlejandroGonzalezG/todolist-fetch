@@ -19,7 +19,6 @@ const Home = () => {
 			return
 		} else true
 	}
-	console.log(objeto)
 	const Span = () => {
 
 		return (
