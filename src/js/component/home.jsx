@@ -19,19 +19,11 @@ const Home = () => {
 			return
 		} else true
 	}
-	const Span = () => {
-
-		return (
-			<>
-				<span className="span">{objeto}</span>
-			</>
-		)
-	}
-
+	
 	return (
 		<>
 			<Header />
-			<TodoList text={text} setText={setText} handleAnswerChange={handleAnswerChange} objeto={objeto} span={span} />
+			<TodoList text={text} setText={setText} handleAnswerChange={handleAnswerChange} objeto={objeto} setObjeto={setObjeto} span={span} />
 		</>
 	);
 };

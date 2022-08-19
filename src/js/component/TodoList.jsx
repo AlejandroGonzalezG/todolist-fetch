@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MdOutlineClose } from 'react-icons/md';
 
 
@@ -26,18 +26,12 @@ const TodoList = (props) => {
     }
 
     const eliminar = (num) => {
-        const index = props.objeto[num];
-        if (num > -1) { 
-            props.objeto.splice(num, 1);
-            num = num-1
-            console.log(props.objeto)
-        }
+        let auxarr = [...props.objeto];
+		auxarr[num] = null;
+		let filtered = auxarr.filter((e) => e !== null);
+		props.setObjeto(filtered);
     }
     
-    useEffect(() => {
-    
-    }, [eliminar()]);
-
     return (
         <div className="container">
             <div className="row">
