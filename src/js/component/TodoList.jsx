@@ -42,7 +42,7 @@ const TodoList = (props) => {
                         props.objeto.length > 0 &&
                         props.objeto.map((obj, num = num+1) => (
                             <div className="col-12" key={num} style={estiloDivMap}>
-                                <span id={num} style={estiloSpan}>{obj}</span><MdOutlineClose id={num} onClick={() => eliminar(num)} />
+                                <span id={num} style={estiloSpan}>{obj.label}</span><MdOutlineClose id={num} onClick={() => eliminar(num)} />
                             </div>
                         ))
                     }
